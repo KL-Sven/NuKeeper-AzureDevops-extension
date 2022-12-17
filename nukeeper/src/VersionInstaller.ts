@@ -62,7 +62,7 @@ export default async function getNuKeeper(versionSpec: string, checkLatest: bool
 
 async function queryLatestMatch(versionSpec: string): Promise<string> {
     try {
-        let nukeeperVersionEndpoint = "https://api.nuget.org/v3/registration3/nukeeper/index.json";
+        let nukeeperVersionEndpoint = "https://api.nuget.org/v3/registration5-gz-semver2/nukeeper/index.json";
         
         let res: httpm.HttpClientResponse = await new httpm.HttpClient(null).get(nukeeperVersionEndpoint);
         let jsonResponse: string = await res.readBody();
